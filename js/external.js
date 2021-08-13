@@ -13,12 +13,11 @@ alert("Great, " + favColor + " is my favorite color too!");
 //creates alert returning users favColor
 
 //Prompts/Alerts for previous JS exercises
-
 //Prompts/Alerts for Question #3-1
 
-var little = prompt("How long did you rent The Little Mermaid for?");
-var bear = prompt("How long did you rent Brother Bear for?");
-var hercules = prompt("How long did you rent Hercules for?");
+var little = prompt("How many days did you rent The Little Mermaid for?");
+var bear = prompt("How many days did you rent Brother Bear for?");
+var hercules = prompt("How many days did you rent Hercules for?");
 //prompts used to collect days rented
 
 var totalDue = ((little * 3) + (bear * 3) + (hercules * 3));
