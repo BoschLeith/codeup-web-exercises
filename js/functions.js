@@ -13,6 +13,13 @@ function sayHello(x) {
     var name = "Hello, " + x + "!";
     return name;
 }
+console.log(sayHello("Bosch"));
+
+//Class example:
+function sayHello(name) {
+    return "Hello, " + name + "!";
+}
+console.log(sayHello("Bosch"));
 
 /**
  * TODO:
@@ -22,9 +29,9 @@ function sayHello(x) {
  * console.log 'helloMessage' to check your work
  */
 
-var helloMessage = sayHello("Bosch")
+var helloMessage = sayHello("Bosch");
 
-console.log(helloMessage)
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -33,10 +40,10 @@ console.log(helloMessage)
  * console.
  */
 
-var myName = "Bosch"
-var helloMessage = sayHello(myName)
+var myName = "Bosch";
+helloMessage = sayHello(myName);
 
-console.log(helloMessage)
+console.log(helloMessage);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -89,11 +96,13 @@ function calculateTip(x, y) {
  * then display the dollar amount they should tip
  */
 
-//var bill = prompt("How much is your bill?");
-//var tipPercent = prompt("What percentage would you like to tip?");
+//I commented these lines out so that it would not prompt me on each page refresh
+/*
+var bill = prompt("How much is your bill?");
+var tipPercent = prompt("What percentage would you like to tip?");
 
-//alert("You should tip $" + calculateTip(bill, tipPercent));
-
+alert("You should tip $" + calculateTip(bill, tipPercent));
+ */
 
 /**
  * TODO:
@@ -110,12 +119,10 @@ function calculateTip(x, y) {
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount(x, y) {
-    var originalPrice = x
-    var discountPrice = y
-    return originalPrice - (originalPrice * discountPrice)
+function applyDiscount(originalPrice, discountPercent) {
+    return originalPrice - (originalPrice * discountPercent);
 }
 
 //console.log(originalPrice + " with a " + discountPrice + "% discount = " + applyDiscount(x, y));
-console.log("Your price after discounts is $" + applyDiscount(random, random))
+console.log("Your price after discounts is $" + applyDiscount(random, random));
 console.log(random + " with a " + random + "% discount = " + applyDiscount(random, random));
