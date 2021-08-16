@@ -98,13 +98,16 @@ reverses it (.reverse()),
 and then concatenates the array back into a string (.join())
 -Bosch
  */
-console.log(reverse("Leith"))
+console.log(reverse("Leith"));
 
 //Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric.
 
+//Work in progress - Bosch
 function isNumeric(input) {
-    var
+    return parseInt(input) === isNaN(input);
 }
+
+console.log(isNumeric("cat"));
 
 //Write a function called count(input) that takes in a string and returns the number of characters.
 
