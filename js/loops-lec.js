@@ -28,15 +28,15 @@
 
 // TODO: Quasar~ create a WHILE loop that runs as long as i is less than 10;
 
-//My attempt:
-//Incrementing i within the condition is not preferred. Technically still works but it includes the number 10 for some reason.
+// My attempt:
+// Incrementing i within the condition is not preferred. Technically still works but it includes the number 10 for some reason.
 var i = 0;
 while(i++ < 10) {
     console.log(i);
 }
 console.log("---LINE BREAK---")
-//Class example:
-//Incrementing i in the body is preferred. Correctly answers question and does not include the number 10.
+// Class example:
+// Incrementing i in the body is preferred. Correctly answers question and does not include the number 10.
 i = 0
 while(i < 10) {
     console.log(i);
@@ -66,7 +66,7 @@ console.log("---LINE BREAK---")
 
 // We can also use what we've learned above within the body of your functions:
 
-//DO/WHILE example:
+// DO/WHILE example:
 function doWhileMultiplyByTwoUntilGreaterThan100(num) {
     do {
         num *= 2;
@@ -78,7 +78,7 @@ doWhileMultiplyByTwoUntilGreaterThan100(2)
 
 console.log("---LINE BREAK---")
 
-//WHILE example:
+// WHILE example:
 function whileMultiplyByTwoUntilGreaterThan100(num) {
     while (num < 100) {
         num *= 2;
@@ -122,27 +122,25 @@ for (var i = 1; i < 25; i++){
 
 // We can get a loop to stop using break;
 
-// var x = 0;
-//
-// while (true) {
-//     alert("This is the song that never ends. It just goes on and on my friends. Somebody started singing not knowing what it was, and now we'll all just keep on singing this because");
-//     x++;
-//     if (x === 5) {
-//         alert("LambChop, cut it out!!")
-//         break;
-//     }
-// }
+var x = 0;
 
+while (true) {
+    alert("This is the song that never ends. It just goes on and on my friends. Somebody started singing not knowing what it was, and now we'll all just keep on singing this because");
+    x++;
+    if (x === 5) {
+        alert("LambChop, cut it out!!")
+        break;
+    }
+}
 
-// for (var j = 5; j < 100000; j += 5) {
-//     if (j === 25) {
-//         break;
-//     }
-//     console.log(j);
-// }
+for (var j = 5; j < 100000; j += 5) {
+    if (j === 25) {
+        break;
+    }
+    console.log(j);
+}
 
 // Notice that by having the break, we're able to get out of the loop that would otherwise run forever.
-
 
 // we can also use continue to allow a loop to skip an iteration.
 
@@ -158,6 +156,5 @@ function allOddNumbersToX (x) {
 
 // allOddNumbersToX(17);
 // allOddNumbersToX(18);
-
 
 // The above function will only log the odd numbers until the argument passed.
