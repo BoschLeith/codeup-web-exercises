@@ -224,7 +224,7 @@ if (luckyNumber > 0 && luckyNumber < 5) {
 
 var usersConfirmation = confirm("Would you like to enter a number?");
 
-function isOdd(x) {
+function isEven(x) {
     return x % 2 === 0;
 }
 
@@ -242,7 +242,7 @@ if (usersConfirmation) {
      if (isNaN(userInput)) {
         alert("That is not a number. Have a nice day.");
     } else {
-         if (isOdd(userInput)) {
+         if (isEven(userInput)) {
              alert("Your number is even.");
          } else {
              alert("Your number is odd.");
@@ -257,4 +257,3 @@ if (usersConfirmation) {
 } else {
     alert("Okay, have a nice day!")
 }
-
