@@ -183,6 +183,7 @@ function calculateTotal(x, y) {
 }
 
 console.log(calculateTotal(3, 10));
+console.log(calculateTotal(3, 10));
 
 /**
  * TODO:
