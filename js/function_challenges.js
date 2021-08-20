@@ -102,27 +102,85 @@ console.log(reverse("Leith"));
 
 //Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric.
 
-//Work in progress - Bosch
 function isNumeric(input) {
-    return parseInt(input) === isNaN(input);
+    return !isNaN(input);
 }
 
-console.log(isNumeric("cat"));
+console.log(isNumeric(5));
+console.log(isNumeric('cat'));
+console.log(isNumeric('5'));
 
 //Write a function called count(input) that takes in a string and returns the number of characters.
 
+function count(input) {
+    return input.length;
+}
+
+console.log(count('cat'));
+console.log(count('Bosch'));
+console.log(count('5'));
+
 //Write a function called add(a, b) that returns the sum of a and b
+
+function add(a,b) {
+    return a + b;
+}
+
+console.log(add(1, 1));
+console.log(add('cats ', 'are the best'));
 
 //Write a function called subtract(a, b) that return the difference between the two inputs.
 
+function subtract(a, b) {
+    return a - b;
+}
+
+console.log(subtract(2, 1));
+
 //Write multiply(a, b) function that returns the product
+
+function multiply(a, b) {
+    return a * b;
+}
+
+console.log(multiply(1, 2));
 
 //Write a divide(numerator, denominator) function that returns a divided by b
 
+function divide(numerator, denominator) {
+    return numerator / denominator;
+}
+
+console.log(divide(6, 2));
+
 //Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
+
+function remainder(number, divisor) {
+    return number % divisor;
+}
+
+console.log(remainder(5, 2));
 
 //Write the function square(a) that takes in a number and returns the number multiplied by itself.
 
+function square(a) {
+    return a * a;
+}
+
+console.log(square(2));
+
 //Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
 
+function  sumOfSquares(a, b) {
+    return add(square(a), square(b));
+}
+
+console.log(sumOfSquares(2, 2));
+
 //Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
+
+function doMath(operator, a, b) {
+    return operator(a, b);
+}
+
+console.log(doMath(subtract, 10, 5 ));
