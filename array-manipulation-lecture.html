@@ -175,21 +175,22 @@
 
 
 */
+var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
 
-// var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+function cleanPhoneNumbers(phoneNumbersString) {
+    var cleanedPhoneNumbers = [];
 
+    // Split the sting into individual phone numbers.
+    var phoneNumbersArr = phoneNumbersString.split('\n');
+    phoneNumbersArr.forEach(function(phoneNumber){
+        var cleanedPhoneNumber = phoneNumber.split('-').join('');
+        cleanedPhoneNumbers.push(cleanedPhoneNumber)
+    });
+    return cleanedPhoneNumbers;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+var results = cleanPhoneNumbers(phoneNumbers);
+console.log(results);
 
 // ============================= (EXTRA INFO) Splicing Elements
 
