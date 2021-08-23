@@ -22,7 +22,23 @@
  *
  */
 
+//save function arguments into var
 
+function generation(x, gender) {
+    if (x === 0) {
+        return console.log("Me!");
+    } else if (x === -1 && gender === 'm') {
+        return console.log("father")
+    } else if (x === -2 && gender === 'm') {
+        return console.log("grandfather")
+    } else if (x === -3 && gender === 'm') {
+        return console.log("great grandfather")
+    } else {
+        return console.log('Who are you?');
+    }
+}
+
+generation(-2, 'm');
 
 /* Say "Hello" Say "Bye"
  * Write a function that takes a string name and a number num (either 0 or 1) and return "Hello" + name if num is 1, otherwise return "Bye" + name.
@@ -36,9 +52,16 @@
  * The name you return must be capitalized.
  */
 
+function sayHelloBye(name, number) {
+    var nameCapitalized = name[0].toUpperCase() + name.substr(1);
+    if (number === 1) {
+        return console.log("Hello " + nameCapitalized);
+    } else {
+        return console.log("Bye " + nameCapitalized);
+    }
+}
 
-
-
+console.log(sayHelloBye("bosch", 1));
 
 /* Tile Teamwork Tactics
  * In a board game, a piece may advance 1-6 tiles forward depending on the number rolled on a six-sided dice. If you advance your piece onto the same tile as another player's piece, both of you earn a bonus.
@@ -57,8 +80,10 @@
  */
 
 function possibleBonus(a, b) {
-    // write your code here
+    return (b - a) <= 6 && (b - a) > 0 && a >= 1 && b >=1;
 }
+
+console.log(possibleBonus(5, 7));
 
 /* Integer in Range?
  * Create a function that validates whether a number n is within the bounds of lower and upper. Return false if n is not an integer.
@@ -75,9 +100,14 @@ function possibleBonus(a, b) {
  */
 
 function intWithinBounds(n, lower, upper) {
-    // write your code here
+    if (!Number.isInteger(n)) {
+        return false;
+    } else {
+        return n > lower && n < upper;
+    }
 }
 
+console.log(intWithinBounds(3, 1, 5));
 
 /* Perimeters with a Catch
  * Write a function that takes a number and returns the perimeter of either a circle or a square. The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, and the number will be the side of the square or the radius of the circle.
