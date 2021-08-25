@@ -13,6 +13,15 @@
  * Expect any positive number between 1 and 1000.
  */
 
+function addUp(number) {
+    var results = 0;
+    for (var i = 1; i <= number; i++) {
+        results = results + i;
+    }
+    return results;
+}
+
+console.log(addUp(4));
 
 /**
  * TODO:
@@ -28,6 +37,17 @@
  * Your output must be case-sensitive (see second example).
  */
 
+function charCount(letter, string) {
+    var count = 0;
+    var position = string.indexOf(letter);
+    while (position !== -1) {
+        count++
+        position = string.indexOf(letter, position +1)
+    }
+    console.log(count)
+}
+
+charCount('c', 'Chamber of secrets');
 
 /**
  * TODO:
@@ -47,6 +67,14 @@
  * Input always contains a vowel.
  */
 
+function firstVowel(word) {
+    var vowels = 'aeiouAEIOU';
+    for(var i = 0; i <word.length; i++){
+    }
+    return console.log(word.indexOf(i))
+}
+
+firstVowel('Brooke');
 
 /**
  * TODO:
