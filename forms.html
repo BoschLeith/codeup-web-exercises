@@ -7,48 +7,72 @@
 <body>
     <section>
         <form method="POST" action="https://hookb.in/ggpdGXJj6DcG7Voo7kLG">
-            <label for="email">Email:</label>
-            <input id="email" name="email" type="email">
+            <div>
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" placeholder="example@codeup.com">
+            </div>
             <br>
-            <label for="password">Password:</label>
-            <input id="password" name="password" type="password">
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" name="password" type="password">
+            </div>
             <br>
+            <div>
+                <span>Fill out a short description of yourself.</span>
+            </div>
             <br>
-            <span>Fill out a short description of yourself.</span>
+            <div>
+                <label for="bio">
+                    <textarea id="bio" name="bio" placeholder="Type here." cols="30" rows="10"></textarea>
+                </label>
+            </div>
             <br>
-            <label for="bio">
-                <textarea id="bio" name="bio" placeholder="Type here."></textarea>
-            </label>
+            <section>
+                <div>
+                    <span>How did you hear about us?</span>
+                </div>
+                <br>
+                <div>
+                    <label for="billboard">
+                    <input id="billboard" type="radio" name="choice1" value="billboard">Billboard<br>
+                    </label>
+                </div>
+                <div>
+                    <label for="radio">
+                    <input id="radio" type="radio" name="choice2" value="radio">Radio Ad<br>
+                    </label>
+                </div>
+                <div>
+                    <label for="internet">
+                    <input id="internet" type="radio" name="choice3" value="internet">Internet Ad<br>
+                    </label>
+                </div>
+                <div>
+                    <label for="other">
+                        <input id="other" type="radio" name="choice4" value="other">Other<br>
+                    </label>
+                </div>
+                <br>
+            </section>
+            <section>
+                <div>
+                    <span>What web browser are you using?</span>
+                </div>
+                <br>
+                <label for="users_browser">
+                    <select id="users_browser" name="users_browser">
+                        <option disabled selected>Choose an option</option>
+                        <option value="chrome">Google Chrome</option>
+                        <option value="firefox">Firefox</option>
+                        <option value="edge">Microsoft Edge</option>
+                        <option value="safari">Apple Safari</option>
+                    </select>
+                </label>
+            </section>
             <br>
-            <br>
-            <span>How did you hear about us?</span>
-            <br>
-            <label for="billboard">
-                <input id="billboard" type="radio" name="choice1" value="billboard">Billboard<br>
-            </label>
-            <label for="radio">
-                <input id="radio" type="radio" name="choice2" value="radio">Radio Ad<br>
-            </label>
-            <label for="internet">
-                <input id="internet" type="radio" name="choice3" value="internet">Internet Ad<br>
-            </label>
-            <label for="other">
-                <input id="other" type="radio" name="choice4" value="other">Other<br>
-            </label>
-            <br>
-            <span>What web browser are you using?</span>
-            <br>
-            <label for="users_browser">
-                <select id="users_browser" name="users_browser">
-                    <option value="chrome">Google Chrome</option>
-                    <option value="firefox">Firefox</option>
-                    <option value="edge">Microsoft Edge</option>
-                    <option value="safari">Apple Safari</option>
-                </select>
-            </label>
-            <br>
-            <br>
-            <input type="submit">
+            <div>
+                <input type="submit">
+            </div>
         </form>
     </section>
 </body>
