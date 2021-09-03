@@ -10,7 +10,7 @@ header p {
 }
 
 html {
-	background-color: rgba(0, 0, 255, 0.2);
+	background-color: rgb(197, 197, 247);
 	background-image: url(/img/veridian-dynamics-logo.png);
 	background-repeat: no-repeat;
 	background-position: top left 50px;
@@ -50,14 +50,13 @@ table {
 
 .gallery {
 	display: grid;
-	align-items: stretch;
 	justify-items: center;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 10px;
 }
 
 .gallery img {
 	border-radius: 50px;
+	margin-bottom: 20px;
 }
 
 img:hover {
@@ -98,7 +97,17 @@ details > div {
 	padding: 1rem 1.5rem;
 }
 
-details span {
-	font-size: larger;
+.price {
+	text-align: center;
+	display: inline-block;
+	background-color: #bebeef;
+	padding: 10px;
+	border-radius: 10px;
 	font-weight: bolder;
+	font-size: x-large;
+	margin-bottom: 10px;
+}
+
+.features {
+	text-decoration-line: underline;
 }
