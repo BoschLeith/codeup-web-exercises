@@ -1,4 +1,104 @@
-.fancy-header {
-    color: purple;
-    text-decoration: underline;
+
+h1 {
+	color: #000000;
+	text-align: center;
+}
+
+header p {
+	text-align: center;
+	text-decoration: underline;
+}
+
+html {
+	background-color: rgba(0, 0, 255, 0.2);
+	background-image: url(/img/veridian-dynamics-logo.png);
+	background-repeat: no-repeat;
+	background-position: top left 50px;
+	background-size: 100px 100px;
+}
+
+ul {
+	list-style: square;
+	display: table;
+	margin: 0 auto;
+}
+
+ol {
+	display: table;
+	margin: 0 auto;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h2, p, footer {
+	text-align: center;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+table {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.gallery {
+	display: grid;
+	align-items: stretch;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.gallery img {
+	border-radius: 50px;
+}
+
+img:hover {
+	box-shadow:  0 0 10px 5px white;
+	cursor: zoom-in;
+}
+
+a:link {
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	background-color: white;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+a:hover {
+	background-color: rgba(0, 0, 255, 0.2);
+	color: white;
+}
+
+details {
+	border: 1px solid #ddd;
+	background: #fff;
+	margin-bottom: 1.5rem;
+	border-radius: 0.35rem;
+}
+
+summary {
+	text-align: center;
+	cursor: pointer;
+	padding: 1rem;
+	border-bottom: 1px solid #ddd;
+}
+
+details > div {
+	text-align: center;
+	padding: 1rem 1.5rem;
+}
+
+details span {
+	font-size: larger;
+	font-weight: bolder;
 }
