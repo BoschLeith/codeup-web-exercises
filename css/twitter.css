@@ -80,3 +80,44 @@ a {
 	line-height: 80px;
 	float: right;
 }
+.profile-details{
+	float: left;
+	width: calc(25% - 16px);
+	margin: 0 .5em 0 .5em;
+}
+.timeline{
+	float: left;
+	width: calc(50% - 16px);
+	margin: 0 .5em 0 .5em;
+}
+.who-to-follow{
+	float: left;
+	width: calc(25% - 16px);
+	margin: 0 .5em 0 .5em;
+}
+.container{
+	padding-top: 2em;
+}
+.media{
+	width: 100%;
+	background-color: var(--light-bg);
+	border-bottom: 1px solid var(--separator-color);
+	padding: .5em;
+	overflow: auto;
+}
+.media-image{
+	width: 50px;
+	margin-top: 1.33em;
+	float: left;
+}
+.media-body{
+	float: right;
+	width: calc(100% - 50px);
+}
+.profile-items{
+	list-style-type: none;
+	padding: 0;
+}
+.profile-entry{
+	margin: .5em;
+}
