@@ -1,0 +1,57 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+nav {
+	background: #bbbbbb;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+nav a {
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	padding: 1em;
+}
+nav a:hover {
+	background: blue;
+}
+#logo {
+
+	margin: auto;
+	position: absolute;
+	align-self: center;
+}
+#logo > a {
+	font-size: 2em;
+	padding: .1799em 1em;
+}
+#followUs {
+	margin-left: auto;
+}
+#search {
+	align-self: center;
+}
+#cart {
+	align-self: center;
+}
+#profile {
+	align-self: center;
+}
+.logo {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+.link-text {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: bolder;
+}
