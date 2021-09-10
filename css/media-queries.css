@@ -49,19 +49,7 @@ footer > p {
 }
 #social-media-links > a {
 	padding: .5em;
-	/*width: auto;*/
 }
-/*footer > p {*/
-/*	float: left;*/
-/*	bottom: 100%;*/
-/*	width: 75%;*/
-/*	margin: 0;*/
-/*}*/
-/*#social-media-links {*/
-/*	float: right;*/
-/*	bottom: 100%;*/
-/*	right: 5%;*/
-/*}*/
 @media screen and (min-width:890px) {
 	.alert-info {
 		display: none;
