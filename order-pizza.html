@@ -7,6 +7,92 @@
 	<title>Pizza World</title>
 </head>
 <body>
-
+	<nav class="navbar bg-light">
+<!--		<a href="#" class="navbar-brand">Pizza World</a>-->
+<!--		<a href="#" class="navbar-nav mx-4">Order Online</a>-->
+<!--		<a href="#" class="navbar-nav mx-4">Menu</a>-->
+		<ul class="nav">
+			<li class="nav-item">
+				<a class="nav-link nav" href="#">Pizza World</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Order Online</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Menu</a>
+			</li>
+		</ul>
+		<form class="form-inline">
+			<input class="form-control" type="search" placeholder="Zip code">
+			<button class="btn btn-outline-dark" type="submit">Search stores near you!</button>
+		</form>
+		<div class="navbar-nav ml-auto">Sign up</div>
+	</nav>
+	<div class="container">
+		<div class="jumbotron" style="background: url(/img/pizza.png)">
+			<h1 class="text-center bg-light">Welcome to Pizza World!</h1>
+		</div>
+		<div>
+			<h2>Build your own pizza!</h2>
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a href="#" class="nav-link">Size and Crust</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Cheese and Sauce</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Toppings</a>
+				</li>
+			</ul>
+			<div class="card">
+				<div class="card-header bg-primary text-white">
+					Choose Size and Crust
+				</div>
+				<div class="card-body">
+					<div class="card">
+						<div class="card-header">
+							Hand Tossed
+						</div>
+						<div class="card-body">
+							Garlic seasoned crust with a rich, buttery taste.
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<input type="radio">
+								<label>Small (10")</label>
+							</li>
+							<li class="list-group-item">
+								<input type="radio">
+								<label>Medium (12")</label>
+							</li>
+						</ul>
+					</div>
+					<div class="card mt-4">
+						<div class="card-header">
+							Crispy Thin
+						</div>
+						<div class="card-body">
+							Thin enough for optimum crispy to crunchy ratio.
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<input type="radio">
+								<label>Medium (12")</label>
+							</li>
+							<li class="list-group-item">
+								<input type="radio">
+								<label>Large (14")</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card-footer text-right">
+					<button type="button" class="btn btn-primary">Next Step</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
