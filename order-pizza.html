@@ -34,65 +34,134 @@
 		</div>
 		<div>
 			<h2>Build your own pizza!</h2>
-			<ul class="nav nav-tabs">
-				<li class="nav-item">
-					<a href="#" class="nav-link">Size and Crust</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Cheese and Sauce</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Toppings</a>
-				</li>
-			</ul>
-			<div class="card">
-				<div class="card-header bg-primary text-white">
-					Choose Size and Crust
+<!--			<ul class="nav nav-tabs">-->
+<!--				<li class="nav-item">-->
+<!--					<a href="#" class="nav-link">Size and Crust</a>-->
+<!--				</li>-->
+<!--				<li class="nav-item">-->
+<!--					<a href="#" class="nav-link">Cheese and Sauce</a>-->
+<!--				</li>-->
+<!--				<li class="nav-item">-->
+<!--					<a href="#" class="nav-link">Toppings</a>-->
+<!--				</li>-->
+<!--			</ul>-->
+			<nav>
+				<div class="nav nav-tabs" id="nav-tab" role="tablist">
+					<a href="#nav-sizeCrust" class="nav-link" id="nav-sizeCrust-tab" role="tab" aria-controls="nav-sizeCrust" aria-selected="true" data-toggle="tab">Size and Crust</a>
+					<a href="#nav-cheeseSauce" class="nav-link" id="nav-cheeseSauce-tab" role="tab" aria-controls="nav-cheeseSauce" aria-selected="false" data-toggle="tab">Cheese and Sauce</a>
+					<a href="#nav-toppings" class="nav-link" id="nav-toppings-tab" role="tab" aria-controls="nav-toppings" aria-selected="false" data-toggle="tab">Toppings</a>
 				</div>
-				<div class="card-body">
+			</nav>
+			<div class="tab-content">
+				<div class="tab-pane" id="nav-sizeCrust" role="tabpanel" aria-labelledby="nav-sizeCrust-tab">
 					<div class="card">
-						<div class="card-header">
-							Hand Tossed
+						<div class="card-header bg-primary text-white">
+							Choose Size and Crust
 						</div>
 						<div class="card-body">
-							Garlic seasoned crust with a rich, buttery taste.
+							<div class="card">
+								<div class="card-header">
+									Hand Tossed
+								</div>
+								<div class="card-body">
+									Garlic seasoned crust with a rich, buttery taste.
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item">
+										<input type="radio">
+										<label>Small (10")</label>
+									</li>
+									<li class="list-group-item">
+										<input type="radio">
+										<label>Medium (12")</label>
+									</li>
+								</ul>
+							</div>
+							<div class="card mt-4">
+								<div class="card-header">
+									Crispy Thin
+								</div>
+								<div class="card-body">
+									Thin enough for optimum crispy to crunchy ratio.
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item">
+										<input type="radio">
+										<label>Medium (12")</label>
+									</li>
+									<li class="list-group-item">
+										<input type="radio">
+										<label>Large (14")</label>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<ul class="list-group">
-							<li class="list-group-item">
-								<input type="radio">
-								<label>Small (10")</label>
-							</li>
-							<li class="list-group-item">
-								<input type="radio">
-								<label>Medium (12")</label>
-							</li>
-						</ul>
-					</div>
-					<div class="card mt-4">
-						<div class="card-header">
-							Crispy Thin
+						<div class="card-footer text-right">
+							<button type="button" class="btn btn-primary">Next Step</button>
 						</div>
-						<div class="card-body">
-							Thin enough for optimum crispy to crunchy ratio.
-						</div>
-						<ul class="list-group">
-							<li class="list-group-item">
-								<input type="radio">
-								<label>Medium (12")</label>
-							</li>
-							<li class="list-group-item">
-								<input type="radio">
-								<label>Large (14")</label>
-							</li>
-						</ul>
 					</div>
 				</div>
-				<div class="card-footer text-right">
-					<button type="button" class="btn btn-primary">Next Step</button>
+				<div class="tab-pane" id="nav-cheeseSauce" role="tabpanel" aria-labelledby="nav-cheeseSauce-tab" >
+					<div class="card">
+						<div class="card-header bg-primary text-white">
+							Choose Cheese and Sauce
+						</div>
+						<div class="card-body">
+							<div class="card">
+								<div class="card-header">
+									Cheese
+								</div>
+								<div class="card-body">
+									How Much?
+								<div class="form-group">
+									<select class="form-control">
+										<option>Light</option>
+										<option>Normal</option>
+										<option>Extra</option>
+										<option>Double</option>
+									</select>
+								</div>
+								</div>
+							</div>
+							<div class="card mt-4">
+								<div class="card">
+									<div class="card-header">
+										Sauce
+									</div>
+									<div class="card-body">
+										What Type?
+									<div class="form-group">
+										<select class="form-control">
+											<option>Tomato Sauce</option>
+											<option>Marinara</option>
+											<option>BBQ Sauce</option>
+											<option>Alfredo Sauce</option>
+										</select>
+									</div>
+										How Much?
+										<div class="form-group">
+										<select class="form-control">
+											<option>Light</option>
+											<option>Normal</option>
+											<option>Extra</option>
+										</select>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-right">
+							<button type="button" class="btn btn-primary">Next Step</button>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="nav-toppings" role="tabpanel" aria-labelledby="nav-toppings-tab">
+					Howdy
 				</div>
 			</div>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
