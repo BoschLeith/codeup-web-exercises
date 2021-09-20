@@ -89,11 +89,15 @@ bottomLink.setAttribute("href", "https://duckduckgo.com");
 //Accessing or Modifying styles
 
 // demonstrate the BODY as a thing to manipulate - the BODY can be targeted as any other thing:
-
 // Get the body element (notice we need to use index 0 of the array!)
 
-// Change the body font color
+var bodyElement = document.getElementsByTagName("body")[0];
 
+// Change the body font color
 // We had to use [] syntax since the property name has a dash
 
+bodyElement.style["background-color"] = "orange";
+
 // Replace dashes with camelCase to use standard . syntax
+
+bodyElement.style.backgroundColor = "orange";
