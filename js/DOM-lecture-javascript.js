@@ -1,13 +1,32 @@
 //~*~ Locating individual elements
 
-// What happens if there is no result?
+var topHeader = document.getElementById("top-header");
+
+console.log(topHeader);
+
+// What happens if there is no result? Misspelled topHeader, returns NULL
+
+var hopTeader = document.getElementById("hop-teader");
+
+console.log(hopTeader);
 
 //~*~ Locating lists of elements
 
 //Element List - retrieve by CLASS or TAG
 
+var specialOffers = document.getElementsByClassName("special-offer");
+
+console.log(specialOffers);
+
+var listItems = document.getElementsByTagName("li");
+
+console.log(listItems);
 
 //Loop through the hatList and print our nodes
+
+for (var i = 0; i < listItems.length; i++) {
+    console.log(listItems[i]);
+}
 
 //~*~ Accessing form input
 
@@ -17,7 +36,7 @@
 //Instead of printing a list of nodes, let's print some text - What HTML is INSIDE our <li>?
 
 //Modifying innerHTML
-//Uh oh - these were last month's top seller, WOOPS -
+//Uh oh - these were last month's top seller, WHOOPS -
 //let's update our <li> to show "Hat TBD" and let's be STRONG about it!
 
 //innerText vs innerHTML
