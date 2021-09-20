@@ -70,10 +70,21 @@ bestSeller.innerHTML= "<em>Will update soon!</em>";
 
 //Attribute methods: hasAttribute, getAttribute, setAttribute, removeAttribute
 
+var bottomLink = document.getElementById("bottom-link");
+
+console.log(bottomLink);
+
 //hasAttribute: return a BOOLEAN if the element has this attribute
+
+console.log(bottomLink.hasAttribute('href')); // should return true
+
 //getAttribute: what's that attribute's value? [the right side of the equation]
+
+console.log(bottomLink.getAttribute("href"));
+
 //setAttribute: let's change that attribute's value!
 
+bottomLink.setAttribute("href", "https://duckduckgo.com");
 
 //Accessing or Modifying styles
 
