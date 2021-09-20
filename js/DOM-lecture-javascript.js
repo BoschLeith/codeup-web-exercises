@@ -30,19 +30,43 @@ for (var i = 0; i < listItems.length; i++) {
 
 //~*~ Accessing form input
 
+var currentPlaceholder = document.forms.hatSearch[0].placeholder;
+
+console.log(currentPlaceholder);
+
 //~*~ Accessing / Modifying Element properties [so I've got a collection of this stuff - what now?]
 //Accessing innerHTML
 
 //Instead of printing a list of nodes, let's print some text - What HTML is INSIDE our <li>?
 
+var topSellers = document.getElementsByClassName("hat-sold");
+
+for (var i = 0; i < topSellers.length; i++) {
+
+    console.log(topSellers[i].innerHTML);
+
+}
+
 //Modifying innerHTML
 //Uh oh - these were last month's top seller, WHOOPS -
 //let's update our <li> to show "Hat TBD" and let's be STRONG about it!
 
+for (var i = 0; i < topSellers.length; i++) {
+
+    topSellers[i].innerHTML = "<strong>Hat TBD</strong>";
+
+}
+
 //innerText vs innerHTML
 //"Our Top Sellers" seems odd now as well - let's adjust!
 
+var bestSeller = document.getElementById("best-seller");
+
+bestSeller.innerText = "Will update soon!";
+
 //Perhaps a little EMPHASIS will assist - will innerText help?
+
+bestSeller.innerHTML= "<em>Will update soon!</em>";
 
 //Attribute methods: hasAttribute, getAttribute, setAttribute, removeAttribute
 
