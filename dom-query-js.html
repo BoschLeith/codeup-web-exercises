@@ -34,44 +34,76 @@
 <script>
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header");
+        // // TODO: Uncomment next line and get the main header element by id
+        // var mainHeader = document.getElementById("main-header");
+        //
+        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // mainHeader.innerHTML = "JavaScript is Cool";
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // // TODO: Uncomment the next line and get the sub header element by id
+        // var subHeader = document.getElementById("sub-header");
+        //
+        // // TODO: Set the text color of subHeader to blue
+        // subHeader.style.color = "blue";
 
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
+        // // TODO: Uncomment the next line and get all list items
+        // var listItems = document.getElementsByTagName("li");
+        //
+        // // TODO: Set text color on every other list item to grey
+        // for (var i = 0; i < listItems.length; i+=2) {
+        //     listItems[i].style.color = "gray";
+        // }
+        //
+        // // TODO: Set text color of li with dbid = 1 to blue
+        // listItems[0].style.color = "blue";
+        //
+        // // Exercise review example:
+        // for (var i = 0; i < listItems.length; i++) {
+        //     if (listItems[i].getAttribute("data-dbid") === "1") {
+        //         listItems[i].style.color = "blue"
+        //     }
+        // }
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
-
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
-
-        // TODO: Set text color on every other list item to grey
-        for (var i = 0; i < listItems.length; i+=2) {
-            listItems[i].style.color = "gray";
-        }
-
-        // TODO: Set text color of li with dbid = 1 to blue
-        listItems[0].style.color = "blue";
-
-        // Exercise review example:
-        for (var i = 0; i < listItems.length; i++) {
-            if (listItems[i].getAttribute("data-dbid") === "1") {
-                listItems[i].style.color = "blue"
-            }
-        }
-
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!"
+        // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        // var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        //
+        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // subParagraphs[0].innerHTML = "Mission Accomplished!"
 
         // TODO: Add 4 buttons to the page. Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place.
+        var button1 = document.getElementById("btn1");
+        var button2 = document.getElementById("btn2");
+        var button3 = document.getElementById("btn3");
+        var button4 = document.getElementById("btn4");
 
+        button1.addEventListener("click", function (){
+            var mainHeader = document.getElementById("main-header");
+            mainHeader.innerHTML = "JavaScript is Cool";
+        })
+
+        button2.addEventListener("click", function (){
+            var subHeader = document.getElementById("sub-header");
+            subHeader.style.color = "blue";
+        })
+
+        button3.addEventListener("click", function (){
+            var listItems = document.getElementsByTagName("li");
+
+            for (var i = 0; i < listItems.length; i+=2) {
+                listItems[i].style.color = "gray";
+            }
+
+            for (var i = 0; i < listItems.length; i++) {
+                if (listItems[i].getAttribute("data-dbid") === "1") {
+                    listItems[i].style.color = "blue"
+                }
+            }
+        })
+
+        button4.addEventListener("click", function (){
+            var subParagraphs = document.getElementsByClassName("sub-paragraph");
+            subParagraphs[0].innerHTML = "Mission Accomplished!"
+        })
     })();
 </script>
 </body>
