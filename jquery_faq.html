@@ -100,6 +100,15 @@
 			$("ul").children().css("font-weight", "bold");
 		});
 	});
+
+	$(document).ready(function (){
+		$("li").click(function (e){
+			e.preventDefault();
+			$("ul").each(function (){
+				$(this).children().first().css("color", "blue");
+			});
+		});
+	});
 </script>
 </body>
 </html>
