@@ -13,6 +13,7 @@
 </head>
 <body>
 <p>2021 Formula 1 Teams</p>
+<a href="#" id="toggleInvisible">Toggle</a>
 <dl>
 	<dt class="invisible">Mercedes</dt>
 	<dd>Lewis Hamilton – #44</dd>
@@ -54,5 +55,16 @@
 	<dd>Nicholas Latifi – #6</dd>
 	<dd>George Russell – #63</dd>
 </dl>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+
+	$(document).ready(function (){
+		$("#toggleInvisible").click(function (e){
+			e.preventDefault();
+			$("dt").toggleClass("invisible");
+		});
+	});
+
+</script>
 </body>
 </html>
