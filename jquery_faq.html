@@ -24,7 +24,7 @@
 <br>
 <div>
 	<button id="toggleInvisible">Invisible</button>
-	<span>Toggles the team names visible or invisible</span>
+	<span>Toggles the drivers names visible or invisible</span>
 </div>
 <br>
 <div>
@@ -43,43 +43,43 @@
 
 <h2>2021 F1 Teams</h2>
 <dl>
-	<dt class="invisible bold">Mercedes</dt>
+	<dt>Mercedes</dt>
 	<dd>Lewis Hamilton – #44</dd>
 	<dd>Valtteri Bottas – #77</dd>
 
-	<dt class="invisible bold">Red Bull</dt>
+	<dt>Red Bull</dt>
 	<dd>Sergio Perez – #11</dd>
 	<dd>Max Verstappen – #33</dd>
 
-	<dt class="invisible bold">McLaren</dt>
+	<dt>McLaren</dt>
 	<dd>Daniel Ricciardo – #3</dd>
 	<dd>Lando Norris – #4</dd>
 
-	<dt class="invisible bold">Aston Martin</dt>
+	<dt>Aston Martin</dt>
 	<dd>Sebastian Vettel – #5</dd>
 	<dd>Lance Stroll – #18</dd>
 
-	<dt class="invisible bold">Alpine</dt>
+	<dt>Alpine</dt>
 	<dd>Fernando Alonso – #14</dd>
 	<dd>Esteban Ocon – #31</dd>
 
-	<dt class="invisible bold">Ferrari</dt>
+	<dt>Ferrari</dt>
 	<dd>Charles Leclerc – #16</dd>
 	<dd>Carlos Sainz – #55</dd>
 
-	<dt class="invisible bold">AlphaTauri</dt>
+	<dt>AlphaTauri</dt>
 	<dd>Pierre Gasly – #10</dd>
 	<dd>Yuki Tsunoda – #22</dd>
 
-	<dt class="invisible bold">Alfa Romeo</dt>
+	<dt>Alfa Romeo</dt>
 	<dd>Kimi Raikkonen – #7</dd>
 	<dd>Antonio Giovinazzi – #99</dd>
 
-	<dt class="invisible bold">Haas</dt>
+	<dt>Haas</dt>
 	<dd>Nikita Mazepin – #9</dd>
 	<dd>Mick Schumacher – #47</dd>
 
-	<dt class="invisible bold">Williams</dt>
+	<dt>Williams</dt>
 	<dd>Nicholas Latifi – #6</dd>
 	<dd>George Russell – #63</dd>
 </dl>
@@ -101,46 +101,112 @@
 	<li>Lewis Hamilton</li>
 	<li>Sergio Perez, Esteban Ocon, Daniel Ricciardo (TIED)</li>
 </ol>
+<div id="imgDiv">
+	<img id="img1" src="img/Lewis-Hamilton.jpg" alt="Lewis Hamilton" height="360px" width="360px" style="border: 10px solid black">
+	<img id="img2" src="img/Max-Verstappen.jpg" alt="Max Verstappen" height="360px" width="360px" style="border: 10px solid black">
+	<img id="img3" src="img/Lando-Norris.jpg" alt="Lando Norris" height="360px" width="360px" style="border: 10px solid black">
+</div>
+<button id="button1">Button #1</button>
+<button id="button2">Button #2</button>
+<button id="button3">Button #3</button>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 <script>
 
+	// Adds bold class to all dt elements
+
+	$("dl").each(function (){
+		$("dt").addClass("bold");
+	})
+
 	// Toggles the invisible class on/off when the button is clicked
-	$(document).ready(function (){
+
 		$("#toggleInvisible").click(function (e){
 			e.preventDefault();
-			$("dt").toggleClass("invisible");
+			$("dd").toggleClass("invisible");
 		});
-	});
 
 	// Highlights the last li in each ul when the button is clicked
-	$(document).ready(function (){
+
 		$("#toggleHighlight").click(function (e){
 			e.preventDefault();
 			$("ol").each(function (){
 				$(this).children().last().css("background-color", "yellow");
 			});
 		});
-	});
 
 	// Changes all list items fw to bold when button is clicked
-	$(document).ready(function (){
+
 		$("#toggleBold").click(function (e){
 			e.preventDefault();
 			$("ol").children().css("font-weight", "bold");
 		});
-	});
 
 	// Changes the font color of the first li in each ul when any li is clicked
-	$(document).ready(function (){
+
 		$("li").click(function (e){
 			e.preventDefault();
 			$("ol").each(function (){
 				$(this).children().first().css("color", "blue");
 			});
 		});
-	});
+
+	// Highlights the dt when clicked
+
+		$("dt").click(function (e){
+			e.preventDefault();
+			$(this).css("background-color", "yellow");
+		});
+
+	// Traversing Bonus
+
+	// Flips img1 and img2 when button is clicked
+
+		$("#button1").click(function (){
+			var img1 = $("#img1").prop("src");
+			var img2 = $("#img2").prop("src");
+			var img3 = $("#img3").prop("src");
+			$("#img1").attr("src", img2);
+			$("#img2").attr("src", img1);
+		});
+
+	// Randomly flips img2 with img1 or img3 when button is clicked
+
+		$("#button2").click(function (){
+			var img1 = $("#img1").prop("src");
+			var img2 = $("#img2").prop("src");
+			var img3 = $("#img3").prop("src");
+
+			function getRandomIntInclusive(min, max) {
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min + 1) + min);
+			}
+
+			var randomNum = getRandomIntInclusive(1,2);
+			console.log(randomNum);
+			if (randomNum === 1) {
+				$("#img2").attr("src", img3);
+				$("#img3").attr("src", img2);
+			} else {
+				$("#img2").attr("src", img1);
+				$("#img1").attr("src", img2);
+			}
+
+		});
+
+	// Flips img3 with img2 when button is clicked
+
+		$("#button3").click(function (){
+			var img1 = $("#img1").prop("src");
+			var img2 = $("#img2").prop("src");
+			var img3 = $("#img3").prop("src");
+
+			$("#img3").attr("src", img2);
+			$("#img2").attr("src", img3);
+		})
 
 </script>
 </body>
