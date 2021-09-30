@@ -14,7 +14,8 @@
 <body>
 <h1>2021 Formula 1 Teams</h1>
 <a href="#" id="toggleInvisible">Toggle Invisible</a>
-<button id="toggleBG">Yellow</button>
+<button id="toggleHighlight">HighLight</button>
+<button id="toggleBold">Bold</button>
 <dl>
 	<dt class="invisible">Mercedes</dt>
 	<dd>Lewis Hamilton – #44</dd>
@@ -83,12 +84,20 @@
 			$("dt").toggleClass("invisible");
 		});
 	});
+
 	$(document).ready(function (){
-		$("#toggleBG").click(function (e){
+		$("#toggleHighlight").click(function (e){
 			e.preventDefault();
 			$("ul").each(function (){
 				$(this).children().last().css("background-color", "yellow");
 			});
+		});
+	});
+
+	$(document).ready(function (){
+		$("#toggleBold").click(function (e){
+			e.preventDefault();
+			$("ul").children().css("font-weight", "bold");
 		});
 	});
 </script>
