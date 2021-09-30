@@ -2,82 +2,111 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Formula 1 FAQs</title>
+	<title>2021 F1 Teams</title>
 
 	<style>
 		.invisible {
 			visibility: hidden;
 		}
+		.highlight{
+			background-color: yellow;
+		}
+		.blue{
+			color: blue;
+		}
+		.bold{
+			font-weight: bold;
+		}
 	</style>
 
 </head>
 <body>
-<h1>2021 Formula 1 Teams</h1>
-<a href="#" id="toggleInvisible">Toggle Invisible</a>
-<button id="toggleHighlight">HighLight</button>
-<button id="toggleBold">Bold</button>
+<br>
+<div>
+	<button id="toggleInvisible">Invisible</button>
+	<span>Toggles the team names visible or invisible</span>
+</div>
+<br>
+<div>
+	<button id="toggleHighlight">HighLight</button>
+	<span><span class="highlight">Highlights</span> the last list item</span>
+</div>
+<br>
+<div>
+	<button id="toggleBold">Bold</button>
+	<span>Turns the list items <strong>BOLD</strong></span>
+</div>
+<br>
+<div>
+	<span>Click any list item to change the first list items font color to <span class="blue">blue</span></span>
+</div>
+
+<h2>2021 F1 Teams</h2>
 <dl>
-	<dt class="invisible">Mercedes</dt>
+	<dt class="invisible bold">Mercedes</dt>
 	<dd>Lewis Hamilton – #44</dd>
 	<dd>Valtteri Bottas – #77</dd>
 
-	<dt class="invisible">Red Bull</dt>
+	<dt class="invisible bold">Red Bull</dt>
 	<dd>Sergio Perez – #11</dd>
 	<dd>Max Verstappen – #33</dd>
 
-	<dt class="invisible">McLaren</dt>
+	<dt class="invisible bold">McLaren</dt>
 	<dd>Daniel Ricciardo – #3</dd>
 	<dd>Lando Norris – #4</dd>
 
-	<dt class="invisible">Aston Martin</dt>
+	<dt class="invisible bold">Aston Martin</dt>
 	<dd>Sebastian Vettel – #5</dd>
 	<dd>Lance Stroll – #18</dd>
 
-	<dt class="invisible">Alpine</dt>
+	<dt class="invisible bold">Alpine</dt>
 	<dd>Fernando Alonso – #14</dd>
 	<dd>Esteban Ocon – #31</dd>
 
-	<dt class="invisible">Ferrari</dt>
+	<dt class="invisible bold">Ferrari</dt>
 	<dd>Charles Leclerc – #16</dd>
 	<dd>Carlos Sainz – #55</dd>
 
-	<dt class="invisible">AlphaTauri</dt>
+	<dt class="invisible bold">AlphaTauri</dt>
 	<dd>Pierre Gasly – #10</dd>
 	<dd>Yuki Tsunoda – #22</dd>
 
-	<dt class="invisible">Alfa Romeo</dt>
+	<dt class="invisible bold">Alfa Romeo</dt>
 	<dd>Kimi Raikkonen – #7</dd>
 	<dd>Antonio Giovinazzi – #99</dd>
 
-	<dt class="invisible">Haas</dt>
+	<dt class="invisible bold">Haas</dt>
 	<dd>Nikita Mazepin – #9</dd>
 	<dd>Mick Schumacher – #47</dd>
 
-	<dt class="invisible">Williams</dt>
+	<dt class="invisible bold">Williams</dt>
 	<dd>Nicholas Latifi – #6</dd>
 	<dd>George Russell – #63</dd>
 </dl>
 <h3>Top Teams</h3>
-<ul>
-	<li>Mercedes 397.5</li>
-	<li>Red Bull Racing 364.5</li>
-	<li>McLaren 234</li>
-</ul>
+<ol>
+	<li>Mercedes</li>
+	<li>Red Bull Racing</li>
+	<li>McLaren</li>
+</ol>
 <h3>Top Drivers</h3>
-<ul>
+<ol>
 	<li>Lewis Hamilton</li>
 	<li>Max Verstappen</li>
 	<li>Valtteri Bottas</li>
-</ul>
+</ol>
 <h3>Most Wins</h3>
-<ul>
+<ol>
 	<li>Max Verstappen</li>
 	<li>Lewis Hamilton</li>
 	<li>Sergio Perez, Esteban Ocon, Daniel Ricciardo (TIED)</li>
-</ul>
+</ol>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 <script>
 
+	// Toggles the invisible class on/off when the button is clicked
 	$(document).ready(function (){
 		$("#toggleInvisible").click(function (e){
 			e.preventDefault();
@@ -85,30 +114,34 @@
 		});
 	});
 
+	// Highlights the last li in each ul when the button is clicked
 	$(document).ready(function (){
 		$("#toggleHighlight").click(function (e){
 			e.preventDefault();
-			$("ul").each(function (){
+			$("ol").each(function (){
 				$(this).children().last().css("background-color", "yellow");
 			});
 		});
 	});
 
+	// Changes all list items fw to bold when button is clicked
 	$(document).ready(function (){
 		$("#toggleBold").click(function (e){
 			e.preventDefault();
-			$("ul").children().css("font-weight", "bold");
+			$("ol").children().css("font-weight", "bold");
 		});
 	});
 
+	// Changes the font color of the first li in each ul when any li is clicked
 	$(document).ready(function (){
 		$("li").click(function (e){
 			e.preventDefault();
-			$("ul").each(function (){
+			$("ol").each(function (){
 				$(this).children().first().css("color", "blue");
 			});
 		});
 	});
+
 </script>
 </body>
 </html>
