@@ -162,37 +162,44 @@
 
 	// Traversing Bonus
 
+	function getImgSrc(){
+		var img1 = $("#img1").prop("src");
+		var img2 = $("#img2").prop("src");
+		var img3 = $("#img3").prop("src");
+
+		return [img1, img2, img3];
+	}
+
+	function getRandomIntInclusive(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+
 	// Flips img1 and img2 when button is clicked
 
 		$("#button1").click(function (){
-			var img1 = $("#img1").prop("src");
-			var img2 = $("#img2").prop("src");
-			var img3 = $("#img3").prop("src");
-			$("#img1").attr("src", img2);
-			$("#img2").attr("src", img1);
+
+			var image = getImgSrc();
+
+			$("#img1").attr("src", image[1]);
+			$("#img2").attr("src", image[0]);
 		});
 
 	// Randomly flips img2 with img1 or img3 when button is clicked
 
 		$("#button2").click(function (){
-			var img1 = $("#img1").prop("src");
-			var img2 = $("#img2").prop("src");
-			var img3 = $("#img3").prop("src");
 
-			function getRandomIntInclusive(min, max) {
-				min = Math.ceil(min);
-				max = Math.floor(max);
-				return Math.floor(Math.random() * (max - min + 1) + min);
-			}
+			var image = getImgSrc();
 
 			var randomNum = getRandomIntInclusive(1,2);
-			console.log(randomNum);
+
 			if (randomNum === 1) {
-				$("#img2").attr("src", img3);
-				$("#img3").attr("src", img2);
+				$("#img2").attr("src", image[2]);
+				$("#img3").attr("src", image[1]);
 			} else {
-				$("#img2").attr("src", img1);
-				$("#img1").attr("src", img2);
+				$("#img2").attr("src", image[0]);
+				$("#img1").attr("src", image[1]);
 			}
 
 		});
@@ -200,12 +207,11 @@
 	// Flips img3 with img2 when button is clicked
 
 		$("#button3").click(function (){
-			var img1 = $("#img1").prop("src");
-			var img2 = $("#img2").prop("src");
-			var img3 = $("#img3").prop("src");
 
-			$("#img3").attr("src", img2);
-			$("#img2").attr("src", img3);
+			var image = getImgSrc();
+
+			$("#img3").attr("src", image[1]);
+			$("#img2").attr("src", image[2]);
 		})
 
 </script>
