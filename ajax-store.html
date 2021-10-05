@@ -7,6 +7,7 @@
 	<style>
 		table, th, td {
 			border: 1px solid black;
+			text-align: center;
 		}
 	</style>
 
@@ -40,33 +41,33 @@
 		//             its contents and fields
 		//       HINT: You will want to target #insertProducts for your new HTML elements
 
-		$.get("data/inventory.json", function (inventory){
-			console.log(inventory);
-			var homeDepot = "";
-			$.each(inventory, function (index, tool){
-					homeDepot += ("<tr>" +
-					"<td>" + tool.title + "</td>" +
-					"<td>" + tool.quantity + "</td>" +
-					"<td>" + tool.price + "</td>" +
-					"<td>" + tool.categories + "</td>" +
-					"</tr>");
-			});
-			$("#insertProducts").html(homeDepot);
-		});
-
-		// Uses .append instead of .html to append it to the products table
+		// Uses .html instead of .append to append it to the products table
 
 		// $.get("data/inventory.json", function (inventory){
 		// 	console.log(inventory);
+		// 	var homeDepot = "";
 		// 	$.each(inventory, function (index, tool){
-		// 		$("#insertProducts").append("<tr>" +
+		// 			homeDepot += ("<tr>" +
 		// 			"<td>" + tool.title + "</td>" +
 		// 			"<td>" + tool.quantity + "</td>" +
 		// 			"<td>" + tool.price + "</td>" +
 		// 			"<td>" + tool.categories + "</td>" +
 		// 			"</tr>");
 		// 	});
+		// 	$("#insertProducts").html(homeDepot);
 		// });
+
+		$.get("data/inventory.json", function (inventory){
+			console.log(inventory);
+			$.each(inventory, function (index, tool){
+				$("#insertProducts").append("<tr>" +
+					"<td>" + tool.title + "</td>" +
+					"<td>" + tool.quantity + "</td>" +
+					"<td>" + tool.price + "</td>" +
+					"<td>" + tool.categories.join(", ") + "</td>" +
+					"</tr>");
+			});
+		});
 
 	})();
 </script>
