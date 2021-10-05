@@ -32,6 +32,13 @@
 		</select>
 	</label>
 </div>
+<div>
+	<form id="addressSubmit">
+		<label for="usersAddress">Address</label>
+		<input type="text" id="usersAddress">
+		<button type="submit" id="submit">Submit</button>
+	</form>
+</div>
 <!-- Mapbox JS -->
 <script src="keys.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
@@ -49,6 +56,35 @@
 		// console.log(e);
 		// console.log(e.target.value);
 		map.zoomTo(e.target.value);
+	})
+
+	$("#submit").click(function (e){
+		e.preventDefault();
+		// console.log($("#usersAddress").val());
+		var usersSearch = $("#usersAddress").val()
+
+		function usersMapMarker(search, token){
+				geocode(search, token).then(function(results){
+
+					map.flyTo({center: results});
+
+
+					var popUp = new mapboxgl.Popup()
+						.setHTML("<div>" +
+							"<div>" + usersSearch + "</div>" +
+							"</div>")
+
+					new mapboxgl.Marker()
+						.setLngLat(results)
+						.setPopup(popUp)
+						.addTo(map)
+						.togglePopup()
+
+				})
+
+		}
+
+		usersMapMarker(usersSearch, mapBoxKey);
 	})
 
 	var favoriteRestaurants = [
