@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>First Mapbox Map</title>
 	<!-- Mapbox CSS -->
-
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
 
@@ -23,7 +23,15 @@
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
-
+<div>
+	<label for="zoom">Zoom
+		<select name="zoom" id="zoom">
+			<option value="5">5x</option>
+			<option value="15">15x</option>
+			<option value="20">20x</option>
+		</select>
+	</label>
+</div>
 <!-- Mapbox JS -->
 <script src="keys.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
@@ -36,6 +44,12 @@
 		zoom: 13,
 		center: [-98.4683, 29.5312]
 	});
+
+	$("#zoom").click(function (e){
+		// console.log(e);
+		// console.log(e.target.value);
+		map.zoomTo(e.target.value);
+	})
 
 	var favoriteRestaurants = [
 		{
