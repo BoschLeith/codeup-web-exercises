@@ -77,13 +77,16 @@ $("#submit").click(function (e){
 	e.preventDefault();
 	var usersSearch = $("#usersAddress").val()
 	usersMapMarker(usersSearch, mapBoxKey);
-	(geocode(usersSearch, mapBoxKey)).then(function (coordinates){
-		usersCoordinates = coordinates
-		console.log(usersCoordinates);
+	(geocode(usersSearch, mapBoxKey)).then(function (mapData){
+		console.log(mapData);
+		console.log(mapData.features[3].center);
+		console.log(mapData.features[3].place_name)
+		usersCoordinates = mapData
+		// console.log(usersCoordinates);
 		$.get("https://api.openweathermap.org/data/2.5/onecall", {
 			appid: openWeatherKey,
-			lat: usersCoordinates[1],
-			lon: usersCoordinates[0],
+			lat: usersCoordinates.features[3].center[1],
+			lon: usersCoordinates.features[3].center[0],
 			units: "imperial"
 		}).done(function(data) {
 			console.log(data);
@@ -97,7 +100,7 @@ function usersMapMarker(search, token){
 	geocode(search, token).then(function(results){
 
 		map.flyTo({
-			center: results,
+			center: results.features[3].center,
 			zoom: 15
 		});
 
@@ -108,7 +111,7 @@ function usersMapMarker(search, token){
 				"</div>")
 
 		new mapboxgl.Marker()
-			.setLngLat(results)
+			.setLngLat(results.features[3].center)
 			.setPopup(popUp)
 			.addTo(map)
 			.togglePopup()
