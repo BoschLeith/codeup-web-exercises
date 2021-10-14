@@ -35,3 +35,11 @@ const users = [
 		yearsOfExperience: 9
 	}
 ];
+
+// 1. Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+
+let least3Lang = users.filter(function (user){
+	return user.languages.length >= 3;
+})
+
+console.log(least3Lang);
