@@ -43,3 +43,11 @@ let least3Lang = users.filter(function (user){
 })
 
 console.log(least3Lang);
+
+// 2. Use .map to create an array of strings where each element is a user's email address
+
+let usersEmails = users.map(function (user){
+	return user.email;
+})
+
+console.log(usersEmails);
