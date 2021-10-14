@@ -59,3 +59,14 @@ let totalYearsEXP = users.reduce(function (total, user){
 }, 0)
 
 console.log(totalYearsEXP);
+
+// 4. Use .reduce to get the longest email from the list of users.
+
+let longestUserEmail = users.reduce(function (longestEmail, user){
+	if(user.email.length > longestEmail.length)
+		return user.email;
+	else
+		return longestEmail;
+}, '')
+
+console.log(longestUserEmail);
