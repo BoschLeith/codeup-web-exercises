@@ -77,3 +77,33 @@ let instructors = users.reduce(function (instructors, user){
 	return instructors + user.name + ", "
 }, '')
 console.log(`Your instructors are: ${instructors}`);
+
+// BONUS: Use .reduce to get the unique list of languages from the list of users.
+
+// let uniLang = users.reduce(function (lang, user){
+// 	if (lang.indexOf(user.languages) < 0) lang.push(user.languages);
+// 		return lang;
+// }, [])
+//
+// console.log(uniLang);
+
+const langMap = users.map( function(user){
+	return user.languages
+})
+
+console.log(langMap);
+
+let langArr = langMap.reduce( function (previousValue, currentValue){
+	return previousValue.concat(currentValue)
+}, [])
+
+console.log(langArr);
+
+let uniqueLang = langArr.reduce(function (uniqueLang, lang){
+	if(!uniqueLang.includes(lang)){
+		uniqueLang.push(lang);
+	}
+	return uniqueLang;
+}, [])
+
+console.log(uniqueLang);
