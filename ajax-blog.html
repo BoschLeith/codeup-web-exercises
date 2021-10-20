@@ -6,10 +6,28 @@
 	<title>AJAX Blog</title>
 </head>
 <body>
-<div id="posts"></div>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<script>
 
+<div class="h1">My Blog</div>
+
+<div id="posts"></div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+	(function () {
+		$.get("data/blog.json", function (blog) {
+			console.log(blog);
+			let blogPost = '';
+			$.each(blog, function (index, post) {
+				blogPost += (
+					`<div class="card m-3"><div class="card-header h5">${post.title}</div><div>${post.date}</div><div class="card-body">${post.content}</div><div class="card-footer">Catergories: ${post.categories}</div></div>`
+				)
+			});
+			$('#posts').html(blogPost);
+		});
+	})();
 </script>
+
 </body>
 </html>
